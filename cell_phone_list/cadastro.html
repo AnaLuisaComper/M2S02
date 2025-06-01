@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de celulares</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Celulares</h1>
+        
+        <form action="#" method="post">
+            <label for="marca">Marca:</label>
+            <select id="marca" name="marca" required>
+                <option value="">Selecione</option>
+                <option value="samsung">Samsung</option>
+                <option value="iphone">iPhone</option>
+                <option value="motorola">Motorola</option>
+                <option value="lg">LG</option>
+                <option value="outra">Outra</option>
+            </select>
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+
+            <label for="cor">Cor:</label>
+            <input type="text" id="cor" name="cor" required>
+
+            <label for="valor">Valor (R$):</label>
+            <input type="number" id="valor" name="valor" step="0.01" required>
+
+            <p>Condição:</p>
+            <label><input type="radio" name="condicao" value="novo" required> Novo</label>
+            <label><input type="radio" name="condicao" value="usado"> Usado</label>
+
+            <label for="info">Demais informações:</label>
+            <textarea id="info" name="info" rows="5"></textarea>
+
+            <div class="botoes">
+                <button type="submit">Salvar</button>
+                <button type="button" onclick="window.history.back()">Voltar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
