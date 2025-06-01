@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculadora">
+        <input type="text" class="display" readonly id="display">
+
+        <div class="botoes"></div>
+        
+        <div>
+        <button onclick="adicionarValor('7')">7</button>
+        <button onclick="adicionarValor('8')">8</button>
+        <button onclick="adicionarValor('9')">9</button>
+        <button onclick="adicionarValor('/')">/</button>
+        </div>
+
+        <div>
+        <button onclick="adicionarValor('4')">4</button>
+        <button onclick="adicionarValor('5')">5</button>
+        <button onclick="adicionarValor('6')">6</button>
+        <button onclick="adicionarValor('*')">*</button>
+        </div>
+
+        <div>
+        <button onclick="adicionarValor('1')">1</button>
+        <button onclick="adicionarValor('2')">2</button>
+        <button onclick="adicionarValor('3')">3</button>
+        <button onclick="adicionarValor('-')">-</button>
+        </div>
+
+        <div>
+        <button onclick="adicionarValor('0')">0</button>
+        <button onclick="adicionarValor('.')">.</button>
+        <button onclick="calcular()">=</button>
+        <button onclick="adicionarValor('+')">+</button>
+        </div>
+
+        <button onclick="adicionarValor(',')">,</button>
+        <button onclick="limparDisplay()">C</button>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+
+        function adicionarValor(valor) {
+                display.value += valor;
+    
+        }
+
+        function limparDisplay() {
+            display.value = '';
+        }
+
+        function calcular() {
+            try {
+                display.value = display.value.replace(',', '.');
+                display.value = eval(display.value);
+            } catch {
+                display.value = 'Erro';
+            }
+        }
+    </script>
+</body>
+</html>
