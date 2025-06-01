@@ -3,13 +3,18 @@ body {
     background-color: #f5f7fa;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo na horizontal */
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     max-width: 1000px;
-    margin: 40px auto;
+    width: 100%;
     background-color: white;
     padding: 30px;
+    margin: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px #ccc;
 }
